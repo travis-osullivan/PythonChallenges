@@ -7,8 +7,7 @@ TRANS = str.maketrans("abcdefghijklmnopqrstuvwxyz",
 
 PLAIN_TEXT = CIPHER_TEXT.translate(TRANS)
 
-print("Cipher: \n%s\n" % CIPHER_TEXT)
-print("Plain: \n%s\n" % PLAIN_TEXT)
+print("Cipher: \n{0}\n\nPlain: \n{1}\n".format(CIPHER_TEXT, PLAIN_TEXT))
 
 URL_SECRET = "map"
-webbrowser.open("http://www.pythonchallenge.com/pc/def/%s.html" % URL_SECRET.translate(TRANS))
+webbrowser.open("http://www.pythonchallenge.com/pc/def/{0}.html".format(URL_SECRET.translate(TRANS)))
