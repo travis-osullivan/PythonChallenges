@@ -1,12 +1,6 @@
-import webbrowser
-import os
+import Utils
 
-SCRIPT_DIR = os.path.dirname(__file__) #<-- absolute dir the script is in
-REL_PATH = "ChallengeInputs\\Challenge.3.txt"
-INPUT_PATH = os.path.join(SCRIPT_DIR, REL_PATH)
-
-with open(INPUT_PATH) as inputFile:
-    INPUT_DATA = inputFile.read()
+INPUT_DATA = Utils.GetChallengeInput(3)
 
 COUNT_DICT = {}
 for elt in INPUT_DATA:
@@ -21,4 +15,4 @@ for entry in COUNT_DICT:
     if COUNT_DICT[entry] == 1:
         ANSWER += entry
 
-webbrowser.open("http://www.pythonchallenge.com/pc/def/{0}.html".format(ANSWER))
+Utils.SubmitChallengeAnswer(ANSWER)
