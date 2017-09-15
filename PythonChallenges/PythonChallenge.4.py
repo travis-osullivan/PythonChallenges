@@ -1,5 +1,5 @@
-import Utils
 import re
+import Utils
 
 INPUT_DATA = Utils.GetChallengeInput(4)
 
