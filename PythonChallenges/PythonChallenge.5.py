@@ -11,14 +11,14 @@ for x in range(0, 251):
         # print("Debug Iteration {0} -- seed: {1} -- html:\n{2}".format(x, SEED, html))
         regex = re.search("the next nothing is (\d+)", html)
 
-        if(regex):
+        if regex:
             SEED = int(regex.group(1))
 
         else:
             print("Iteration {0}: No next nothing. Possible result is -- \n{1}" .format(x, html))
 
             # Corner cases
-            if("b'Yes. Divide by two and keep going.'" == html):
+            if "b'Yes. Divide by two and keep going.'" == html:
                 SEED = int(SEED/2)
 
 Utils.SubmitChallengeAnswer("peak")
