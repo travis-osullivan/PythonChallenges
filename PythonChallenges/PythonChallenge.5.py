@@ -8,8 +8,8 @@ for x in range(0, 251):
     with urllib.request.urlopen('http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing={0}'.format(SEED)) as response:
 
         html = str(response.read())
-        # print("Debug Iteration {0} -- seed: {1} -- html:\n{2}".format(x, SEED, html))
-        regex = re.search("the next nothing is (\d+)", html)
+        print("Debug Iteration {0} -- seed: {1} -- html:\n{2}".format(x, SEED, html))
+        regex = re.search("next nothing is (\d+)", html)
 
         if regex:
             SEED = int(regex.group(1))
